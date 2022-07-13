@@ -7,11 +7,26 @@ h1.addEventListener("click", (e) => {
 h1.addEventListener("mouseleave", (e) => {
   e.target.style.removeProperty("background-color");
 });
+
+
+document.getElementById('greeting').addEventListener("mouseover", (e) => {
+    e.target.textContent = "Hi, welcome!"
+})
+
+const appendParagraph = (key) => {
+    const child = document.createElement('p')
+    child.innerText = key
+    document.querySelector("section").appendChild(child)
+}
+
 const updateH2Text = val => {
     document.getElementById("greeting").textContent = val;
 }
+
 if (typeof exports != 'undefined') {
     module.exports = {
-        updateH2Text
+        updateH2Text,
+        appendParagraph
     }
 }
+
