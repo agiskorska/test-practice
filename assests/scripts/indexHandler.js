@@ -10,3 +10,7 @@ const appendParagraph = (key) => {
     document.querySelector("section").appendChild(child)
 
 }
+
+document.getElementById('greeting').addEventListener("mouseover", (e) => {
+    e.target.textContent = "Hi, welcome!"
+})

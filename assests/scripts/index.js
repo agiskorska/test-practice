@@ -7,3 +7,11 @@ h1.addEventListener("click", (e) => {
 h1.addEventListener("mouseleave", (e) => {
   e.target.style.removeProperty("background-color");
 });
+const updateH2Text = val => {
+    document.getElementById("greeting").textContent = val;
+}
+if (typeof exports != 'undefined') {
+    module.exports = {
+        updateH2Text
+    }
+}
